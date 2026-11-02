@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2026_09_08__Create_user_table.sql
+      author: peanutsh
+      comment: >
+        Создание таблицы users.
+      sqlFile:
+        path: db/changelog/dbscripts/2026_09_08__Create_user_table.sql
+        relativeToChangelogFile: true
+        splitStatements: true
+        endDelimiter: ;
+
+
+  - changeSet:
+      id: 2026_09_08__Create_branches_table.sql
+      author: peanutsh
+      comment: >
+        Создание таблицы cards.
+      sqlFile:
+        path: db/changelog/dbscripts/2026_09_08__Create_cards_table.sql
+        relativeToChangelogFile: true
+        splitStatements: true
+        endDelimiter: ;

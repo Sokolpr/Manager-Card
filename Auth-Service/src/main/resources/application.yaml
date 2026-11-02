@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: Auth-Service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPAHIBERNATE_DDL_AUTO}
+    show-sql: true
+
+  liquibase:
+    user: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+  data:
+    redis:
+      host: redis_auth
+      port: 6379
+      ttl-minutes: ${SPRING_JPAHIBERNATE_DDL_AUTO}
+      password: ${TIME_TO_LIVE_TOKEN_MINUTES}
+
+
+  cashe:
+    type: redis
+
+jwt:
+  secret: ${JWT_SECRET}
